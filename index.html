@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#2B2B2B"/>
+    <meta name="description" content="Sorting Algorithm Visualizer"/>
+    <meta property="og:title" content="Sorting Algorithm Visualizer"/>
+    <meta property="og:description" content="A website for visualizing sorting algorithms."/>
+    <link rel="apple-touch-icon" sizes="180x180" href="src/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="src/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="src/style/includes.css"/>
+    <script src="src/libs/jQuery3.6.0.min.js" defer="defer"></script>
+    <script src="src/libs/rangeslider.js-2.3.0/rangeslider.min.js" defer="defer"></script>
+    <script src="src/javascript/loading.js" defer="defer"></script>
+    <script src="src/javascript/algorithms/abstractAlgorithm.js" defer="defer"></script>
+    <script src="src/javascript/algorithms/bubblesort.js" defer="defer"></script>
+    <script src="src/javascript/algorithms/selectionsort.js" defer="defer"></script>
+    <script src="src/javascript/algorithms/quicksort.js" defer="defer"></script>
+    <script src="src/javascript/main.js" defer="defer"></script>
+
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="text-wrapper">
+            <div class="text-1 text">Sorting Algorithns Visualizer</div>
+            <div class="text-2 text">Sorting Algorithns Visualizer</div>
+            <div class="text-3 text">Sorting Algorithns Visualizer</div>
+            <div class="text-4 text">Sorting Algorithns Visualizer</div>
+            <div class="text-5 text">Sorting Algorithns Visualizer</div>
+            <div class="text-6 text">Sorting Algorithns Visualizer</div>
+            <div class="text-7 text">Sorting Algorithns Visualizer</div>
+            <!-- <div class="text-8 text">Sorting Algorithns Visualizer</div> -->
+            <!-- <div class="text-9 text">Sorting Algorithns Visualizer</div> -->
+            <!-- <div class="text-10 text">Sorting Algorithns Visualizer</div> -->
+            <!-- <div class="text-11 text">Sorting Algorithns Visualizer</div> -->
+        </div>
+    </div>
+
+<div id="info">
+
+    <header>
+        <h1>Sorting Algorithms Visualizer </h1>
+    </header>
+
+    <h2>About algorithms</h2>
+    <div class="info-section">
+        <div id="infonavigation">
+            <button id="info-navigation-quicksort" onclick="setInfo('quicksort')" class="selected">Quick Sort</button>
+            <button id="info-navigation-bubblesort" onclick="setInfo('bubblesort')">Bubble Sort</button>
+            <button id="info-navigation-selectionsort" onclick="setInfo('selectionsort')">Selection Sort</button>
+        </div>
+        <div id="info-quicksort" class="active">
+            <div class="info-content">
+                <p>Quick Sort is a sorting algorithm. It is a divide and conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quick sort.</p>
+            </div>
+        </div>
+        <div id="info-bubblesort">
+            <div class="info-content">
+                <p>Bubble Sort is a sorting algorithm. It is a comparison sort. It compares the adjacent elements and swaps them if they are in wrong order..</p>
+            </div>
+        </div>
+        <div id="info-selectionsort">
+            <div class="info-content">
+                <p>Selection Sort is a sorting algorithm. It is a comparison sort. It divides the input array into two parts, the sorted part and the unsorted part. It iterates over the unsorted array and finds the smallest element. It then swaps it with the element in the sorted array.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="content" style="display: none;">
+    <div class="section-view">
+        <div id="view"></div>
+    </div>
+    <div class="section-run">
+        <button id="btn-go" onClick="startSort()">Sort</button>
+    </div>
+    <div class="section-settings">
+        <div class="select-section algorithm">
+            <label>Algorithm</label>
+            <button id="quicksort" onclick="setAlgorithm('quicksort')" class="selected">Quick Sort</button>
+            <button id="bubblesort" onclick="setAlgorithm('bubblesort')">Bubble Sort</button>
+            <button id="selectionsort" onclick="setAlgorithm('selectionsort')">Selection Sort</button>
+        </div>
+        <div class="select-section speed">
+            <label for="speed-slider" class="title">Speed</label>
+            <div class="slider">
+                <p class="nosel">Slow</p>
+                <input type="range" id="speed-slider" value="150" min="1" max="200">
+                <p class="nosel">Fast</p>
+            </div>
+        </div>
+        <div class="select-section length">
+            <label for="length-slider" class="title">Length</label>
+            <div class="slider">
+                <p class="nosel">Short</p>
+                <input type="range" id="length-slider" value="30" min="10">
+                <p class="nosel">Long</p>
+            </div>
+        </div>
+        <!--<div class="select-section color">
+            <label class="title">Color</label>
+        </div>-->
+    </div>
+</div>
+
+<div id="footer" style="display: none">
+    <p>Made by <a href="https://github.com/AmanKas" title="Github Profile" rel="nofollow">AmanKas</a></p>
+</div>
+</body>
+</html>
